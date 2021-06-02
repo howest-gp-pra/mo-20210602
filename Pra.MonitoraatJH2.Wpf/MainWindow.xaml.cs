@@ -198,7 +198,8 @@ namespace Pra.MonitoraatJH2.Wpf
             string postalCode = txtPostalCode.Text.Trim();
             string city = txtCity.Text.Trim();
             string country = txtCountry.Text.Trim();
-            AddressType addressType = (AddressType)cmbAddressTypes.SelectedItem;
+            ComboBoxItem itm = (ComboBoxItem)cmbAddressTypes.SelectedItem;
+            AddressType addressType = (AddressType)itm.Tag;
 
             Person person = (Person)lstPersons.SelectedItem;
             Address address;
